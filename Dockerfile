@@ -6,7 +6,7 @@ RUN apt-get update && apt-get -y dist-upgrade \
         mysql-client uwsgi uwsgi-plugin-python3 nginx \
     && rm -rf /var/cache/apt/archives/*
 
-RUN sudo apt-get install libsasl2-dev python-dev libldap2-dev libssl-dev python-pip python-setuptools mysql-server mysql-client
+RUN sudo apt-get -y install libsasl2-dev python-dev libldap2-dev libssl-dev python-pip python-setuptools mysql-server mysql-client
 
 RUN useradd -m -s /bin/bash oncall
 
